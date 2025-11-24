@@ -1,4 +1,4 @@
-/**
+/*
   |============================
   | include css partials with
   | default @import url()
@@ -7,12 +7,62 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+/* start form css */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 44px;
+}
+
+.form input{
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  margin-right: 8px;
+  padding-left: 16px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+}
+
+
+
+.form button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  outline: none;
+  border: none;
+
+  background-color: #4e75ff;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.form button:hover{
+  background-color: #6c8cff;
+}
+/* end form css */
+
+/* start gallery css */
+.gallery {
+  display: flex
+}
+
+.hidden {
+  display: none;
+}
+/* end gallery css */
