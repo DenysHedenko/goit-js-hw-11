@@ -58,11 +58,84 @@
 /* end form css */
 
 /* start gallery css */
-.gallery {
-  display: flex
+
+.loader {
+  margin: 0 auto;
+  margin-top: 64px;
+}
+
+
+.loader {
+  font-size: 48px;
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d66f1b;
+  box-sizing: border-box;
+  animation: spotlight 2s linear infinite alternate;
+}
+
+@keyframes spotlight {
+
+  0%,
+  20% {
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+    letter-spacing: 32px;
+  }
 }
 
 .hidden {
   display: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap : 24px;
+  justify-content: center;
+
+  margin-top: 32px
+}
+
+.gallery-item {
+  width: 360px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.gallery-item a {
+  display: block;
+}
+
+.gallery-image {
+  display: block;
+  object-fit: cover;
+  width: 360px;
+  height: 152px;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-around;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.item-info div {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
 }
 /* end gallery css */

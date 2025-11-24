@@ -3,7 +3,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 const gallery = document.querySelector('.gallery');
-const lightbox = new SimpleLightbox('.gallery a', { /* опції */ });
+const lightbox = new SimpleLightbox('.gallery a');
 const loader = document.querySelector('.loader');
 
 export function createGallery(hits) {
@@ -11,22 +11,22 @@ export function createGallery(hits) {
         return `
         <li class="gallery-item">
             <a href="${largeImageURL}">
-                <img src="${webformatURL}" alt="${tags}">
-                <ul class="item-info">
-                    <li>Likes
-                    <div>${likes}</div>
-                    </li>
-                    <li>Views
-                    <div>${views}</div>
-                    </li>
-                    <li>Comments
-                    <div>${comments}</div>
-                    </li>
-                    <li>Downloads
-                    <div>${downloads}</div>
-                    </li>
-                </ul>
+                <img class="gallery-image" src="${webformatURL}" alt="${tags}">
             </a>
+            <ul class="item-info">
+                <li>Likes
+                <div>${likes}</div>
+                </li>
+                <li>Views
+                <div>${views}</div>
+                </li>
+                <li>Comments
+                <div>${comments}</div>
+                </li>
+                <li>Downloads
+                <div>${downloads}</div>
+                </li>
+            </ul>
         </li>`;
     }).join('');
     

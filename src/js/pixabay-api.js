@@ -11,9 +11,10 @@ export function getImagesByQuery(query) {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
+    per_page: 12,
     };
 
-    return axios.get(BASE_URL, { params: PARAMS })
+    return    axios.get(BASE_URL, { params: PARAMS })
         .then(response => response.data)
         .catch(error => {
             throw error;
